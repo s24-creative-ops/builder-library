@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GPT Builder Component Library Overlay Test</title>
   <style>
-
     @import url("https://www.static-immobilienscout24.de/fro/core/8.5.0/css/core.min.css");
     @import url("https://is24-lp-creator.github.io/lp-creator/core/core-foundations.css");
     @import url("https://is24-lp-creator.github.io/lp-creator/core/core-buttons.css");
     @import url("https://is24-lp-creator.github.io/lp-creator/core/core-components.css");
-    
+
     :root {
       --sidebar-width: 224px;
       --sidebar-visible-width: 224px;
@@ -888,7 +887,7 @@
 
     .imagery-ratio-chip--tbd {
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
     }
 
     .imagery-ratio-chip--secondary {
@@ -1633,7 +1632,11 @@
       margin-top: 0;
     }
 
-    .library-shell__email-preview .button {
+    .library-shell__email-preview .button,
+    .library-shell__email-preview .button-filled-default,
+    .library-shell__email-preview .button-filled-brand,
+    .library-shell__email-preview .button-outline-strong,
+    .library-shell__email-preview .button-outline-weak {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -1643,22 +1646,40 @@
       border-radius: 999px;
       background: var(--preview-brand-mint);
       color: var(--preview-text-primary);
+      font-family: "Make It Better", Arial, Roboto, sans-serif;
       font-size: 17px;
-      font-weight: 700;
+      font-weight: 600;
+      letter-spacing: 0;
       line-height: 20px;
       text-decoration: none;
       white-space: nowrap;
+      font-synthesis: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       appearance: none;
       cursor: default;
     }
 
-    .library-shell__email-preview .button--outline {
+    .library-shell__email-preview .button,
+    .library-shell__email-preview .button-filled-brand {
+      background: var(--preview-brand-mint);
+      color: var(--preview-text-primary);
+    }
+
+    .library-shell__email-preview .button-filled-default {
+      background: #333333;
+      color: #ffffff;
+    }
+
+    .library-shell__email-preview .button--outline,
+    .library-shell__email-preview .button-outline-strong {
       border-color: var(--preview-text-primary);
       background: transparent;
       color: var(--preview-text-primary);
     }
 
-    .library-shell__email-preview .button--outline-soft {
+    .library-shell__email-preview .button--outline-soft,
+    .library-shell__email-preview .button-outline-weak {
       border-color: #d9d9d9;
       background: transparent;
       color: var(--preview-text-primary);
@@ -3478,7 +3499,7 @@
                             </div>
                             <div class="module__hero-spacer module__hero-spacer--button" aria-hidden="true"></div>
                             <div class="module__cta-row">
-                              <button class="button" type="button">Lorem ipsum dolor</button>
+                              <button class="button-filled-brand" type="button">Lorem ipsum dolor</button>
                             </div>
                             <div class="module__hero-spacer module__hero-spacer--35" aria-hidden="true"></div>
                           </div>
@@ -3515,7 +3536,7 @@
                             <li>Sed diam nonumy eirmod</li>
                           </ul>
                         </div>
-                        <div class="module__cta-row module__cta-row--compact"><button class="button button--outline-soft" type="button">Lorem ipsum</button></div>
+                        <div class="module__cta-row module__cta-row--compact"><button class="button-outline-weak" type="button">Lorem ipsum</button></div>
                       </div>
                     </div>
                   </section>
@@ -3696,7 +3717,7 @@
                             <p class="module__body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
                           </div>
                         </div>
-                        <div class="module__cta-row module__cta-row--compact"><button class="button button--outline-soft" type="button">Lorem ipsum</button></div>
+                        <div class="module__cta-row module__cta-row--compact"><button class="button-outline-weak" type="button">Lorem ipsum</button></div>
                       </div>
                     </div>
                   </section>
@@ -3734,7 +3755,7 @@
                             <p class="module__body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
                           </article>
                         </div>
-                        <div class="module__cta-row"><button class="button button--outline-soft" type="button">Lorem ipsum</button></div>
+                        <div class="module__cta-row"><button class="button-outline-weak" type="button">Lorem ipsum</button></div>
                       </div>
                     </div>
                   </section>
@@ -3770,7 +3791,7 @@
                             <p class="module__body"><strong>Lorem ipsum dolor.</strong><br />Sit amet, consetetur sadipscing elitr.</p>
                           </article>
                         </div>
-                        <div class="module__cta-row"><button class="button button--outline-soft" type="button">Lorem ipsum</button></div>
+                        <div class="module__cta-row"><button class="button-outline-weak" type="button">Lorem ipsum</button></div>
                       </div>
                     </div>
                   </section>
@@ -3838,7 +3859,7 @@
                             <tr><td>Lorem ipsum</td><td>Lorem ipsum</td><td>Lorem ipsum</td></tr>
                           </tbody>
                         </table>
-                        <div class="module__cta-row module__cta-row--compact"><button class="button button--outline-soft" type="button">Lorem ipsum</button></div>
+                        <div class="module__cta-row module__cta-row--compact"><button class="button-outline-weak" type="button">Lorem ipsum</button></div>
                       </div>
                     </div>
                   </section>
@@ -3880,7 +3901,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="module__cta-row module__cta-row--compact"><button class="button button--outline-soft" type="button">Lorem ipsum</button></div>
+                        <div class="module__cta-row module__cta-row--compact"><button class="button-outline-weak" type="button">Lorem ipsum</button></div>
                       </div>
                     </div>
                   </section>
@@ -3955,16 +3976,20 @@
 
           <section class="library-section" id="email-buttons" data-nav="Buttons">
             <section class="module-row">
-              <div class="module-copy" data-module="button"><button class="module-copy__button" type="button" aria-label="button kopieren" title="button kopieren"><span class="module-copy__name">button</span><svg class="module-copy__icon module-copy__icon--default" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span class="module-copy__icon--success" aria-hidden="true"></span></button></div>
-              <div class="module-row__module"><section class="library-shell__email-preview"><div class="email-utility-sample"><button class="button" type="button">Lorem ipsum</button></div></section></div>
+              <div class="module-copy" data-module="button-filled-default"><button class="module-copy__button" type="button" aria-label="button-filled-default kopieren" title="button-filled-default kopieren"><span class="module-copy__name">button-filled-default</span><svg class="module-copy__icon module-copy__icon--default" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span class="module-copy__icon--success" aria-hidden="true"></span></button></div>
+              <div class="module-row__module"><section class="library-shell__email-preview"><div class="email-utility-sample"><button class="button-filled-default" type="button">button-filled-default</button></div></section></div>
             </section>
             <section class="module-row">
-              <div class="module-copy" data-module="button--outline"><button class="module-copy__button" type="button" aria-label="button--outline kopieren" title="button--outline kopieren"><span class="module-copy__name">button--outline</span><svg class="module-copy__icon module-copy__icon--default" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span class="module-copy__icon--success" aria-hidden="true"></span></button></div>
-              <div class="module-row__module"><section class="library-shell__email-preview"><div class="email-utility-sample"><button class="button button--outline" type="button">Lorem ipsum</button></div></section></div>
+              <div class="module-copy" data-module="button-filled-brand"><button class="module-copy__button" type="button" aria-label="button-filled-brand kopieren" title="button-filled-brand kopieren"><span class="module-copy__name">button-filled-brand</span><svg class="module-copy__icon module-copy__icon--default" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span class="module-copy__icon--success" aria-hidden="true"></span></button></div>
+              <div class="module-row__module"><section class="library-shell__email-preview"><div class="email-utility-sample"><button class="button-filled-brand" type="button">button-filled-brand</button></div></section></div>
             </section>
             <section class="module-row">
-              <div class="module-copy" data-module="button--outline-soft"><button class="module-copy__button" type="button" aria-label="button--outline-soft kopieren" title="button--outline-soft kopieren"><span class="module-copy__name">button--outline-soft</span><svg class="module-copy__icon module-copy__icon--default" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span class="module-copy__icon--success" aria-hidden="true"></span></button></div>
-              <div class="module-row__module"><section class="library-shell__email-preview"><div class="email-utility-sample"><button class="button button--outline-soft" type="button">Lorem ipsum</button></div></section></div>
+              <div class="module-copy" data-module="button-outline-strong"><button class="module-copy__button" type="button" aria-label="button-outline-strong kopieren" title="button-outline-strong kopieren"><span class="module-copy__name">button-outline-strong</span><svg class="module-copy__icon module-copy__icon--default" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span class="module-copy__icon--success" aria-hidden="true"></span></button></div>
+              <div class="module-row__module"><section class="library-shell__email-preview"><div class="email-utility-sample"><button class="button-outline-strong" type="button">button-outline-strong</button></div></section></div>
+            </section>
+            <section class="module-row">
+              <div class="module-copy" data-module="button-outline-weak"><button class="module-copy__button" type="button" aria-label="button-outline-weak kopieren" title="button-outline-weak kopieren"><span class="module-copy__name">button-outline-weak</span><svg class="module-copy__icon module-copy__icon--default" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span class="module-copy__icon--success" aria-hidden="true"></span></button></div>
+              <div class="module-row__module"><section class="library-shell__email-preview"><div class="email-utility-sample"><button class="button-outline-weak" type="button">button-outline-weak</button></div></section></div>
             </section>
             <section class="module-row">
               <div class="module-copy" data-module="teaser-link"><button class="module-copy__button" type="button" aria-label="teaser-link kopieren" title="teaser-link kopieren"><span class="module-copy__name">teaser-link</span><svg class="module-copy__icon module-copy__icon--default" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span class="module-copy__icon--success" aria-hidden="true"></span></button></div>
